@@ -170,7 +170,7 @@ $
 ```
 你会发现只有一个空白行，然后又回到了`shell prompt`上了。
 这是因为`echo`在预设上，在显示完argument之后，还会送出以一个换行符号
-(`new-line charactor`). 
+(`new-line character`). 
 但是上面的command `echo`并没有任何argument，那结果就只剩一个换行符号。
 若你要取消这个换行符号， 可以利用`echo`的`-n` 选项:
 ```shell
@@ -289,7 +289,7 @@ $ echo $?
 对`shell`来说，是有类别之分的呢？
 
 简单而言，(我不敢说精确的定义，注1),
-`command line`的每一个`charactor`, 分为如下两种：
+`command line`的每一个`character`, 分为如下两种：
 
 - literal：也就是普通的纯文字，对`shell`来说没特殊功能；
 - meta: 对`shell`来说，具有特定功能的特殊保留元字符。
@@ -594,7 +594,7 @@ test
 这个问题，出在`IFS=;`上。
 因为这个`;`在问题一中的command line上是一个meta,
 并非`";"`符号本身。
-因此，`IFS=;`是将IFS设置为 null charactor
+因此，`IFS=;`是将IFS设置为 null character
 (不是space、tab、newline)。
 
 要不是试试下面这个代码片段：
@@ -695,7 +695,7 @@ name=value
 
 在设定变量的时候，得遵守如下规则：
  
-- 等号左右两边不能使用分隔符号(IFS),也应避免使用shell的保留元字符(meta charactor); 
+- 等号左右两边不能使用分隔符号(IFS),也应避免使用shell的保留元字符(meta character); 
 - 变量的名称(name)不能使用$符号;
 - 变量的名称(name)的首字符不能是数字(number)。
 - 变量的名称(name)的长度不可超过256个字符。
